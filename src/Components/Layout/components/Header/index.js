@@ -1,11 +1,18 @@
+// import { useState, useEffect } from 'react';
 import classNames from 'classnames/bind';
-import styles from './Header.module.scss'
+// import Tippy from '@tippyjs/react/headless';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faCircleXmark, faMagnifyingGlass, faSpinner } from '@fortawesome/free-solid-svg-icons';
+
+
+// import { Wrapper as PopperWrapper } from '~/Components/Popper';
+import Button from '~/Components/Button';
+import styles from './Header.module.scss'
 
 const cx = classNames.bind(styles)
 
 function Header() {
+
     return <header className={cx('wrapper')}>
         <div className={cx('inner')}>
             <div className={cx('logo')}>
@@ -23,7 +30,7 @@ function Header() {
                 </button>
             </div>
             <div className={cx("action")}>
-
+                <Button to="/login" target='_blank'>Log In</Button>
             </div>
         </div>
     </header>
